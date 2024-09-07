@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="preview-container" id="preview-container">
+      <div class="preview-sub-container">
+        <div class="preview-download">
+          <h3>Download for free</h3>
+          <a
+            href=""
+            id="download-preview"
+            target="_blank"
+            class="preview-download-btn"
+          >
+            <span>Open in New Tab</span>
+            <!-- <i class="fa-solid fa-download"></i> -->
+            <i class="fa-solid fa-share"></i>
+          </a>
+
+          <button type="button" id="preview-close" class="preview-download-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="preview-img">
+          <img id="preview-img" src="/assets/girl-image.webp" alt="" />
+          <!-- <video
+            src="/project1/assests/bg-video.mp4"
+            controls
+            autoplay
+            muted
+            loop
+          ></video> -->
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sub-container">
+        <div class="home-container">
+          <header class="home-content">
+            <ul class="navigation-list" type="none">
+              <li class="nav-list-item">
+                <a href="./index.html" class="nav-item-link"
+                  ><i class="fa-brands fa-pied-piper"></i> Clipora.</a
+                >
+              </li>
+              <li class="nav-list-item hide-nav">
+                <a href="./images.html" class="nav-item-link">Photos</a>
+              </li>
+              <li class="nav-list-item hide-nav">
+                <a href="./videos.html" class="nav-item-link">Videos</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="./contact.html" target="_blank" class="nav-item-link"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="home-img">
+              <img
+                src="https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="home-content-2">
+              <h1 class="heading">
+                Get the best quality images and videos for free.
+              </h1>
+              <div class="search-div">
+                <form class="form">
+                  <input
+                    type="search"
+                    name="search"
+                    id="searchInput"
+                    placeholder="Search"
+                  />
+                  <button class="btn" id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <section class="gallery">
+          <div class="content-nav-container">
+            <ul class="content-nav">
+              <li class="content-nav-item">
+                <a href="./index.html" class="content-nav-link">Home</a>
+              </li>
+              <li class="content-nav-item">
+                <a href="./images.html" class="content-nav-link">Images</a>
+              </li>
+              <li class="content-nav-item">
+                <a href="./videos.html" class="content-nav-link">Videos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="gallery-content">
+            <!-- <div class="col1-img">
+              <div class="img-hover-container preview-trigger">
+                <div class="img-hover-content">
+                  <button class="download" type="button" id="download-btn">
+                    <span class="download-text">Download</span>
+                    <i class="fa-solid fa-download"></i>
+                  </button>
+                </div>
+                <div class="img-container">
+                  <img src="/assets/girl-image.webp" alt="" />
+                </div>
+              </div>
+            </div> 
+            
+            <div class="col2-img">
+              <div class="img-hover-container preview-trigger">
+                <div class="img-hover-content">
+                  <button class="download" type="button" id="download-btn">
+                    <span class="download-text">Download</span>
+                    <i class="fa-solid fa-download"></i>
+                  </button>
+                </div>
+                <div class="img-container">
+                  <img
+                    src="/assets/girl-image.webp"
+                    alt=""
+                    class="preview-trigger"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col3-img">
+              <div class="img-hover-container preview-trigger">
+                <div class="img-hover-content">
+                  <button class="download" type="button" id="download-btn">
+                    <span class="download-text">Download</span>
+                    <i class="fa-solid fa-download"></i>
+                  </button>
+                </div>
+                <div class="img-container">
+                  <img
+                    src="/assets/girl-image.webp"
+                    alt=""
+                    class="preview-trigger"
+                  />
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <button id="load-more-btn" class="load-more-btn">Load More</button>
+        </section>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

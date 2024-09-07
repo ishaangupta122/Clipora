@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(53, 53, 53);
+      }
+
+      .home-container {
+        background: white;
+      }
+      .home-content {
+        position: relative;
+      }
+      .navigation-list {
+        padding: 20px 0 0 0;
+        height: 15%;
+        display: flex;
+        align-items: center;
+      }
+      .nav-list-item {
+        margin: 0 20px 0 0;
+      }
+      .nav-list-item a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #2a2a2a;
+        transition: all 0.3s;
+      }
+      .nav-list-item:first-child {
+        margin: 0 auto 0 30px;
+        background: linear-gradient(45deg, #ff1500, #0d00fd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .nav-list-item:first-child a {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .nav-list-item:first-child i {
+        font-size: 1.7rem;
+      }
+      .nav-list-item a:hover {
+        color: rgb(75, 75, 75);
+      }
+      .home-content-2 {
+        position: relative;
+        top: -10%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+      .container-fluid {
+        /* background: white; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .row {
+        margin: 7vh 0;
+        width: 100%;
+        max-width: 800px;
+      }
+      .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        width: 80%;
+      }
+
+      .formButtons {
+        display: flex;
+        justify-content: end;
+        gap: 7px;
+      }
+      .form-input {
+        position: relative;
+      }
+      .form-input i {
+        position: absolute;
+        left: 0%;
+        padding: 16px 0 0 10px;
+        color: #a8a8a8;
+        font-size: 0.9rem;
+      }
+      .form-input input {
+        padding: 10px;
+      }
+      .form-input textarea {
+        padding: 9px 0 0 0;
+      }
+      .form-input input,
+      .form-input textarea {
+        padding-left: 32px;
+        font-weight: 400;
+      }
+      #message {
+        min-height: 130px;
+        resize: none;
+        padding-left: 32px;
+      }
+      @media (max-width: 600px) {
+        .hide-nav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home-container">
+      <header class="home-content">
+        <ul class="navigation-list" type="none" id="navbarSupportedContent">
+          <li class="nav-list-item">
+            <a href="./index.html" class="nav-item-link"
+              ><i class="fa-brands fa-pied-piper"></i> Clipora.</a
+            >
+          </li>
+          <li class="nav-list-item hide-nav">
+            <a href="./images.html" class="nav-item-link">Photos</a>
+          </li>
+          <li class="nav-list-item hide-nav">
+            <a href="./videos.html" class="nav-item-link">Videos</a>
+          </li>
+          <li class="nav-list-item hide-nav">
+            <a href="./contact.html" target="_blank" class="nav-item-link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="home-content-2">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-header text-primary">
+                    <h4 class="card-title pt-2 pb-1 text-center">Contact Us</h4>
+                  </div>
+                  <div class="card-body">
+                    <form
+                      action="https://api.web3forms.com/submit"
+                      method="POST"
+                      id="contactForm"
+                    >
+                      <div class="form-group">
+                        <input
+                          type="hidden"
+                          name="access_key"
+                          value="7059166b-c9d1-48c3-a26c-197a90008ddf"
+                        />
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <label for="name" class="text-primary"
+                          >Enter Your Name</label
+                        >
+                        <div class="form-input">
+                          <i class="fa-solid fa-user"></i>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            class="form-control mt-2 text-dark"
+                            placeholder="Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="email" class="text-primary"
+                          >Enter Your Email</label
+                        >
+                        <div class="form-input">
+                          <i class="fa-solid fa-envelope"></i>
+                          <input
+                            type="email"
+                            name="email"
+                            class="form-control mt-2"
+                            id="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="phone" class="text-primary"
+                          >Enter Your Phone</label
+                        >
+                        <div class="form-input">
+                          <i class="fa-solid fa-phone"></i>
+                          <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            class="form-control mt-2"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="message" class="text-primary"
+                          >Enter Your Message</label
+                        >
+                        <div class="form-input">
+                          <i class="fa-solid fa-comment"></i>
+                          <textarea
+                            class="form-control mt-2"
+                            name="message"
+                            id="message"
+                            placeholder="Message..."
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group formButtons">
+                        <button type="reset" class="btn btn-danger">
+                          Cancel
+                        </button>
+                        <button class="btn btn-primary" id="formSubmit">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer text-center pt-3 text-primary">
+                    <h4>Thanks For Visiting</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
