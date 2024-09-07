@@ -27,7 +27,7 @@ async function fetchVideos(page = 1, query = currentQuery) {
 
 function displayVideos(videos) {
   const galleryContent = document.querySelector(".gallery-content");
-  if (currentPage === 1) galleryContent.innerHTML = ""; // Clear previous videos only on a new search
+  if (currentPage === 1) galleryContent.innerHTML = "";
   videos.forEach((video) => {
     const colVid = document.createElement("div");
     colVid.classList.add("col-img");

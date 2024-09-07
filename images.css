@@ -21,12 +21,13 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(53, 53, 53);
 }
+
 .home-container {
-  background: rgba(0, 0, 0, 0.53);
+  background: rgba(0, 0, 0, 0.4);
 }
 .home-content {
   position: relative;
-  height: 85vh;
+  height: 90vh;
   max-height: 700px;
 }
 .home-img img {
@@ -37,7 +38,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-repeat: no-repeat;
 }
 .navigation-list {
   height: 15%;
@@ -66,12 +66,11 @@ a {
 }
 .nav-list-item:first-child i {
   font-size: 1.7rem;
-  /* color: lightgreen; */
+  /* color: darkkhaki; */
 }
 .nav-list-item a:hover {
   color: rgb(192, 189, 189);
 }
-
 .home-content-2 {
   position: relative;
   top: 27%;
@@ -85,27 +84,16 @@ a {
 }
 .home-content-2 .heading {
   font-size: 2rem;
+  font-family: monospace;
   text-transform: uppercase;
   text-align: center;
   color: white;
-  font-family: monospace;
-  margin: 0 15px;
+  width: 90%;
 }
 .search-div {
   width: 70%;
 }
-@media (max-width: 550px) {
-  .hide-nav {
-    display: none;
-  }
-  .home-content-2 {
-    top: 20%;
-  }
-  .home-content-2 .heading {
-    margin: 0 30px;
-    line-height: 50px;
-  }
-}
+
 .form {
   display: flex;
   justify-content: center;
@@ -150,21 +138,16 @@ a {
   gap: 1rem;
   width: 100%;
   padding: 20px;
+  height: 100%;
 }
-@media (max-width: 900px) {
-  .gallery-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .download-text {
-    display: none;
-  }
-}
+
 .content-nav-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5vh 0;
+  /* height: 15vh; */
 }
 .content-nav {
   display: flex;
@@ -202,10 +185,18 @@ a {
 .img-container img {
   max-height: 600px;
   height: 70vh;
+  width: 100%;
+  border-radius: 0.4rem;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  object-fit: cover;
+}
+.img-container video {
+  width: 100%;
+  position: relative;
   border-radius: 0.4rem;
   background-repeat: no-repeat;
-  object-fit: cover;
-  width: 100%;
+  background-size: cover;
 }
 .img-hover-container {
   position: relative;
@@ -222,7 +213,7 @@ a {
   z-index: 100;
   height: 99.2%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: all 0.3s;
 }
@@ -272,7 +263,7 @@ a {
   display: flex;
   align-items: center;
   padding: 0 25px;
-  background: rgb(205, 230, 239);
+  background: rgb(198, 241, 255);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -280,9 +271,9 @@ a {
   margin: 0 auto 0 0;
 }
 #download-preview {
+  margin: 0 10px 0 0;
   cursor: pointer;
   /* padding: 12px 17px; */
-  margin: 0 10px 0 0;
 }
 .preview-download-btn {
   background: #000;
@@ -294,15 +285,15 @@ a {
   outline: none;
   border: none;
 }
+#preview-close {
+  cursor: pointer;
+  padding: 12px 17px;
+}
 .preview-download-btn span {
   margin: 0 5px 0 0;
 }
 .preview-download-btn:hover {
   background-color: rgb(37, 37, 37);
-}
-#preview-close {
-  padding: 12px 17px;
-  cursor: pointer;
 }
 .preview-img {
   position: absolute;
@@ -325,6 +316,28 @@ a {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+.load-more-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s;
+}
+.load-more-btn:hover {
+  background-color: rgb(37, 37, 37);
+}
+@media (max-width: 900px) {
+  .gallery-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .download-text {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
   .preview-container .preview-sub-container {
@@ -359,19 +372,15 @@ a {
   .gallery-content {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-.load-more-btn {
-  background-color: #000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin: 20px 0;
-  transition: background-color 0.3s;
-}
-
-.load-more-btn:hover {
-  background-color: rgb(37, 37, 37);
+  .hide-nav {
+    display: none;
+  }
+  .home-content-2 {
+    top: 20%;
+  }
+  .home-content-2 .heading {
+    font-size: 1.6rem;
+    margin: 0 30px;
+    line-height: 45px;
+  }
 }

@@ -1,4 +1,4 @@
-const apiKey = "qguIWiR0OtGvsm9mX1TsAq5OGac45XyDyPhGLiFoRCuKlduU0BMvqobs"; // Replace with your Pexels API key
+const apiKey = "qguIWiR0OtGvsm9mX1TsAq5OGac45XyDyPhGLiFoRCuKlduU0BMvqobs";
 let currentPage = 1; // Track the current page of images
 const perPage = 30; // Number of images per page
 let currentQuery = "nature and snow"; // Default query
@@ -27,7 +27,7 @@ async function fetchImages(page = 1, query = currentQuery) {
 
 function displayImages(photos) {
   const galleryContent = document.querySelector(".gallery-content");
-  if (currentPage === 1) galleryContent.innerHTML = ""; // Clear previous images only on a new search
+  if (currentPage === 1) galleryContent.innerHTML = "";
   photos.forEach((photo) => {
     const colImg = document.createElement("div");
     colImg.classList.add("col-img");

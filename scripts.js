@@ -27,7 +27,7 @@ async function fetchImages(page = 1, query = currentQuery) {
 
 function displayImages(photos) {
   const galleryContent = document.querySelector(".gallery-content");
-  if (currentPage === 1) galleryContent.innerHTML = ""; // Clear previous images only on a new search
+  if (currentPage === 1) galleryContent.innerHTML = "";
   photos.forEach((photo) => {
     const colImg = document.createElement("div");
     colImg.classList.add("col-img");
